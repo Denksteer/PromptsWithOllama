@@ -10,11 +10,11 @@ class TestApp(unittest.TestCase):
 
     def test_capital(self):
         correct_capital = 0
-        for i in range(3):
+        for i in range(100):
             answer = Assignment2.ask_for_capital(country, model)
             if "Canberra" in answer:
                 correct_capital += 1
-        self.assertGreaterEqual(correct_capital, 2, f"The model failed to give the correct answer more than allowed")
+        self.assertGreaterEqual(correct_capital, 100, f"The model failed to give the correct answer more than allowed")
 
     def test_llm_judge(self):
         answer = "The capital of Australia is Canberra."
