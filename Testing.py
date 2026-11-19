@@ -22,7 +22,7 @@ class TestApp(unittest.TestCase):
 
         self.assertEqual(response, "yes")
 
-    def test_llm_judge_made_up(self):
+    def test_llm_judge_rejects_hallucination(self):
         answer = "The capital of Pillowcastla is pilocite."
         response = Assignment2.check_the_verdict("Pillowcastla", answer, "There is no such country, so it has no capital.", model)
 
